@@ -29,8 +29,8 @@ const Tab = props => {
 
 // Make sure you include PropTypes on your props.
 
-CommentSection.propTypes = {
-  comments: PropTypes.arrayOf(
+Tab.propTypes = {
+  tab: PropTypes.arrayOf(
       PropTypes.shape({
           headLine: PropTypes.string,
           tab: PropTypes.string,

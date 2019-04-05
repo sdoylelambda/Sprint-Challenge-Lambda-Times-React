@@ -24,8 +24,8 @@ export default class Content extends Component {
 
   changeSelected = tab => {
     // this function should take in the tab and update the state with the new tab.
-    const copiedComments = this.state.copiedComments
-    const arrayWithNewComment = copiedComments.push(commentText)
+    // const copiedComments = this.state.copiedComments
+    // const arrayWithNewComment = copiedComments.push(commentText)
     
     // this.state.tabs.add(tab)
   };
