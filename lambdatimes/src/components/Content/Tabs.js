@@ -1,5 +1,6 @@
 import React from 'react';
 import Tab from './Tab';
+import propTypes from 'prop-types'
 
 const Tabs = props => {
   return (
@@ -11,7 +12,7 @@ const Tabs = props => {
             give the tab component a `selectTabHandler`,
              the `selectedTab`, and the `tab` itself as props*/}
           {this.state.Tabs.map(tab => (
-            <Tab checkpost={tab.selectTabHandler} checkpost={tab.selectedTab} checkpost={tab.tab} />
+            <Tab selectTabHandler={tab.selectTabHandler} selectedTab={tab.selectedTab} tab={tab.tab} />
           ))}
       </div>
     </div>
@@ -19,4 +20,13 @@ const Tabs = props => {
 };
 
 // Make sure to use PropTypes to validate your types!
+
+Tabs.propTypes = {
+  post: PropTypes.shape({
+    selectTabHandler: PropTypes.string.isRequired,
+    selectedTab: PropTypes.string.isRequired,
+    tab: PropTypes.string.isRequired
+  })
+}
+
 export default Tabs;
