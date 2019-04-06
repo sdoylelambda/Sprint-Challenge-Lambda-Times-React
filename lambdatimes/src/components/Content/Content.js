@@ -23,6 +23,9 @@ export default class Content extends Component {
   }
 
   changeSelected = tab => {
+
+    // logic for setting tab 
+
     // this function should take in the tab and update the state with the new tab.
     // const copiedComments = this.state.copiedComments
     // const arrayWithNewComment = copiedComments.push(commentText)
@@ -43,6 +46,8 @@ export default class Content extends Component {
           of the items from cardData. 
         - else, it should only return those cards whose 'tab' matched this.state.selected.
     */
+
+    // conditional if statement
 
     // if {
     //   {tab === all : return this.state.cardData

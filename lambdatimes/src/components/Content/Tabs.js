@@ -1,6 +1,6 @@
 import React from 'react';
 import Tab from './Tab';
-import propTypes from 'prop-types'
+import PropTypes from 'prop-types'
 
 const Tabs = props => {
   return (
