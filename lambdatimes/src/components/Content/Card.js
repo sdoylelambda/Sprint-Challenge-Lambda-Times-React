@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 const Card = props => {
   return (
     <div className="card">
-      <div className="headline">{props.headline}</div>
+      <div className="headline">this is the headline{props.headline}</div>
       <div className="author">
         <div className="img-container">
-          <img src={props.image} alt='image' />
+          <img src={props.image} alt='image here' />
         </div>
         <span>By {props.author}</span>
       </div>
