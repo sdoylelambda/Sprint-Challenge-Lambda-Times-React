@@ -19,4 +19,15 @@ const Tab = props => {
 
 // Make sure you include PropTypes on your props.
 
+Tab.propTypes = {
+  tab: PropTypes.arrayOf(
+      PropTypes.shape({
+          headLine: PropTypes.string,
+          tab: PropTypes.string,
+          img: PropTypes.string,
+          author: PropTypes.string
+           })
+      )
+  }
+
 export default Tab;
