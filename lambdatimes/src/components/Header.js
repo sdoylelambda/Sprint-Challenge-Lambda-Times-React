@@ -24,8 +24,8 @@ const HeaderStyle = styled.header`
 
 const Header = () => {
   return (
-   <div> 
-     <HeaderStyle>
+    <div className="header">
+     {/* <HeaderStyle> */}
       <span className="date">SMARCH 32, 2018</span>
       <h1>Lambda Times</h1>
       <span className="temp">98°</span>
