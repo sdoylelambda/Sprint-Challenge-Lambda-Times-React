@@ -4,12 +4,12 @@ import PropTypes from 'prop-types';
 const Card = props => {
   return (
     <div className="card">
-      <div className="headline">{props.post.headline}</div>
+      {/* <div className="headline">{props.post.headline}</div> */}
       <div className="author">
         <div className="img-container">
-          <img src={props.post.img} alt='image' />
+          {/* <img src={props.post.img} alt='image' /> */}
         </div>
-        <span>By {props.post.author}</span>
+        {/* <span>By {props.post.author}</span> */}
       </div>
     </div>
   );
