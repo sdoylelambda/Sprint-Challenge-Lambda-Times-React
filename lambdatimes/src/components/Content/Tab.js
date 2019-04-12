@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { tabData } from '../../data';
 
 const Tab = props => {
   /* Using your props, determine if the `tab` prop matches the `selectedTab` prop, 
@@ -7,19 +8,20 @@ const Tab = props => {
       if it is not it should just be 'tab'*/
 
 
-      // if(props.tab === props.selectedTab){
-      //   this.setState({tab: active-tab})
-      // } else {
-      //   this.setState({ tab })
-      // }
+      if(props.tab === props.selectedTab){
+        this.setState({ tab: tabData})
+      } else {
+        this.setState({ tab: tabData })
+      }
 
-      
+
   return (
     <div
-      className={''}
+      className={`tab${props.tab.tab ? "tab active-tab" : "tab"}`}
       onClick={() => {
         /* Replace this dummy click handler function with your selectTabHandler function from props 
          you'll need to pass the `tab` in as an argument to this handler. */
+         props.toggleItem(props.tab.id)
       }}
     >
       {props.tab.toUpperCase()}
