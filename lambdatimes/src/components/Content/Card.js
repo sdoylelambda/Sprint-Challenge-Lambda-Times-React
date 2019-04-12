@@ -8,7 +8,7 @@ const Card = props => {
       <div className="author">
         <div className="img-container">
           <img src={props.image} alt='image here' />
-        </div>
+        </div> 
         <span>By {props.author}</span>
       </div>
     </div>
