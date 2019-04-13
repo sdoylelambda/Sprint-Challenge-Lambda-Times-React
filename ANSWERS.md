@@ -5,7 +5,7 @@
   
   Describe a life-cycle event in React?
   
-  a. Life-cycle events in react starts in constructor then the  
+  a. Life-cycle events in react starts in constructor then renders the react updates the DOM and mounting/unmounting.
   
  Explain the details of a Higher Order Component?
  
