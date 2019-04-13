@@ -12,7 +12,8 @@ const Tabs = props => {
           console.log("this one here", tab)
           return (
             <Tab 
-            selectTabHandler={tab.selectTabHandler} 
+            changeSelected={props.changeSelected}
+            selectedTabHandler={tab.selectedTabHandler} 
             selectedTab={tab.selectedTab} 
             tab={tab} 
             key={i}

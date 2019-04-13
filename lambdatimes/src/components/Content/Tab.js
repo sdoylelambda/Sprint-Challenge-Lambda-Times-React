@@ -2,19 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { tabData } from '../../data';
 
-const Tab = props => {
+ const Tab = props => {
       
-      if(props.tab === props.selectedTab){
-        this.setState({ tab: tabData})
-      } else {
-        this.setState({ tab: tabData })
-      }
+      // if(props.tab === props.selectedTab){
+      //   this.setState({ tab: tabData})
+      // } else {
+      //   this.setState({ tab: tabData })
+      // }
 
   return (
     <div
-      className={`tab${props.tab.tab ? "tab active-tab" : "tab"}`}
+      className={props.tab === props.selectedTab ? "tab active-tab" : 'tab'}
       onClick={() => {
-         props.toggleItem(props.tab.id)
+         props.changeSelected(props.tab)
       }}
     >
       {props.tab.toUpperCase()}

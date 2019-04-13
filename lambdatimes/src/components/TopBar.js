@@ -1,10 +1,9 @@
 import React from 'react';
-import styled, {css} from 'styled-components';
-
-// Refactor this component to use styled components and not classNames. 
+import styled from 'styled-components';
+// Refactor this component to use styled components and not classNames.
 // You can find the corresponding CSS in the CSS/index.css file
 
-const TopbarStyle = styled.div`
+const Topbar=styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
@@ -14,7 +13,7 @@ const TopbarStyle = styled.div`
   height: 44px;
   background-color: #333;
 `
-const Container = styled.div`
+const Topcontainer=styled.div`
   width: 100%;
   display: flex;
   justify-content: none;
@@ -23,86 +22,69 @@ const Container = styled.div`
   color: #fff;
   letter-spacing: 1px;
   padding: 0 10px;
-@media (min-width: 1280px) {
-  .top-bar .container {
-    width: 1280px;
 `
-
-const Left = styled.div`
+const Left=styled.div`
   display: flex;
   justify-content: none;
   align-items: center;
   flex-direction: row;
   flex: 1;
   font-size: 11px;
-
 `
+const Span=styled.span`
+  cursor: pointer;
+  margin-right: 25%;
+  font-weight: bold;
 
-const Center = styled.div`
-display: flex;
+  &:hover{
+    text-decoration: underline;
+  }
+`
+const Center=styled.div`
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   flex: 3;
   font-size: 9px;
-
 `
-
-const Right = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex-direction: row;
-  flex: 1;
-  font-size: 11px;
-  font-weight: bold;
-`
-
-const Span1 = styled.span `
+const CenterSpan=styled.span`
   cursor: pointer;
   margin-right: 5%;
+  &:last-child{
+  margin-right: 0;
+}
 `
 
-const Span2 = styled.span`
-margin-right: 0;
 
+const Right = styled.div`
+ display: flex;
+ justify-content: flex-end;
+ align-items: center;
+ flex-direction: row;
+ flex: 1;
+ font-size: 11px;
+ font-weight: bold;
 `
-const Span3 = styled.span`
+const RightSpan =styled.span`
 cursor: pointer;
-
 `
-
-
-
-// .top-bar .container .container-center span:last-child {
-//   margin-right: 0;
-// }
-// .top-bar .container .container-center span:hover {
-//   text-decoration: underline;
-// }
-
-
-// .top-bar .container .container-right span {
-//   cursor: pointer;
-// }
-
-
 const TopBar = () => {
-  return (
-    <TopbarStyle>
-      <Container>
-        <Left>
-          <Span1>TOPICS</Span1><Span1>SEARCH</Span1>
-        </Left>
-        <Center>
-          <Span2>GENERAL</Span2><Span2>BROWNBAG</Span2><Span2>RANDOM</Span2><Span2>MUSIC</Span2><Span2>ANNOUNCEMENTS</Span2>
-        </Center>
-        <Right>
-          <Span3>LOG IN</Span3>
-        </Right>
-      </Container>
-    </TopbarStyle>
-  )
+ return (
+   <Topbar>
+     <Topcontainer>
+       <Left>
+         <Span>TOPICS</Span><Span>SEARCH</Span>
+       </Left>
+       <Center>
+         <CenterSpan>GENERAL</CenterSpan><CenterSpan>BROWNBAG</CenterSpan><CenterSpan>RANDOM</CenterSpan><CenterSpan>MUSIC</CenterSpan><CenterSpan>ANNOUNCEMENTS</CenterSpan>
+       </Center>
+       <Right>
+         <RightSpan>LOG IN</RightSpan>
+       </Right>
+     </Topcontainer>
+   </Topbar>
+ )
 }
 
 export default TopBar;

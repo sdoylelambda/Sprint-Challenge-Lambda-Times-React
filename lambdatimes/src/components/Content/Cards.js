@@ -12,7 +12,7 @@ const Cards = props => {
             key={i}
             post={post} 
             headline={post.headline} 
-            image={post.img} 
+            img={post.img} 
             author={post.author} 
             />
           );
